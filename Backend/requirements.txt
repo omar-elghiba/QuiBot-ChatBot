@@ -1,0 +1,15 @@
+
+gunicorn
+requests
+pytest
+pre-commit
+gdown
+fastapi
+uvicorn
+# faiss
+faiss-cpu
+tensorflow
+transformers
+keras
+numpy
+pandas

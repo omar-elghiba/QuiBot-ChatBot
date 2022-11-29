@@ -1,0 +1,22 @@
+import gdown
+gdown.download(
+    "https://drive.google.com/u/0/uc?id=1-zkmU9AevOKRZlO7xicvLYnmcH3OcjWJ&export=download",
+    "src/models/tf_gpt2_model_2_15_epoch_4/tf_model.h5",
+)
+
+gdown.download(
+    "https://drive.google.com/u/0/uc?id=1-Ej--mprgdKGR1okcWX05dPBYcS2xAmd&export=download",
+    "src/models/question_extractor_model_2_11/saved_model.pb",
+)
+
+gdown.download(
+    "https://drive.google.com/u/0/uc?id=1-72oqr6RXMJjrwHQW-TE7JoXX-zoqclc&export=download",
+    "src/models/question_extractor_model_2_11/variables/variables.data-00000-of-00001",
+)
+
+gdown.download(
+    "https://drive.google.com/u/0/uc?id=1-f-AGcPBSd_TgwO9pCkA19sz9wNVrGgQ&export=download",
+    "src/models/train_gpt_data.pkl",
+)
+
+

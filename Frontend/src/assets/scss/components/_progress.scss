@@ -1,0 +1,112 @@
+@use '../' as *;
+
+.home-main {
+    .animated-progress {
+        width: 300px;
+        height: 30px;
+        border-radius: 5px;
+        margin: 20px 10px;
+        border: 1px solid rgb(189, 113, 113);
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .animated-progress span {
+        height: 100%;
+        display: block;
+        width: 0;
+        color: rgb(255, 251, 251);
+        line-height: 30px;
+        position: absolute;
+        text-align: end;
+        padding-right: 5px;
+      }
+      
+      .progress-blue span {
+        background-color: blue;
+      }
+      .progress-green span {
+        background-color: green;
+      }
+      .progress-purple span {
+        background-color: indigo;
+      }
+      .progress-red span {
+        background-color: red;
+      }
+    
+      .progressbar {
+        display: block;
+        background: transparent;
+        overflow: unset;
+        height: auto;
+    
+        .title {
+            margin-bottom: 8px;
+            p {
+                font-size: 17px;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin-bottom: 0;
+              }
+        }
+    
+        .barline {
+            height: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+        
+        .countbar p {
+            position: absolute;
+            right: -19px;
+            top: -35px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+      
+      
+    #myChart ,#myChart2{
+        width: 240px;
+    }
+}
+.countbar {
+  height: 12px;
+  border-radius: 20px;
+  position: relative;
+  .progress-bar {
+    height: 12px;
+    border-radius: 20px;
+  }
+  &.s1 {
+    .progress-bar {
+      background: #3D88FB;
+    }
+  }
+  &.s2 {
+    .progress-bar {
+      background: #5637C8;
+    }
+  }
+  &.s3 {
+    .progress-bar {
+      background: #00D199;
+    }
+  }
+  &.s4 {
+    .progress-bar {
+      background: #C87B07;
+    }
+  }
+  &.s5 {
+    .progress-bar {
+      background: #A92535;
+    }
+  }
+  &.s6 {
+    .progress-bar {
+      background: #9116CD;
+    }
+  }
+}

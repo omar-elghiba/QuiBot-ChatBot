@@ -1,0 +1,82 @@
+@use './variables' as *;
+
+@mixin flex($alignItem, $justifyContent) {
+    display: flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+@mixin  absolute (){
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin  transition3 (){
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@mixin  topcenter (){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+@mixin size ($width , $height) {
+    width: $width;
+    height: $height;
+}
+@mixin mobileapp {
+    @media only screen and (max-width: $mobile-app) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop-1200 {
+    @media only screen and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin desktop-1400 {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin desktop-1650 {
+    @media only screen and (max-width: 1650px) {
+        @content;
+    }
+}
+@mixin desktop-1750 {
+    @media only screen and (max-width: 1750px) {
+        @content;
+    }
+}
+@mixin desktop-1900 {
+    @media only screen and (max-width: $desktop-1900) {
+        @content;
+    }
+}

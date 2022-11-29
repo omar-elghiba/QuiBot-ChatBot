@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatbot-frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: chatbot-frontend-deployment
+  template:
+    metadata:
+      labels:
+        app: chatbot-frontend-deployment
+    spec:
+      containers:
+        - name: chatbot-frontend
+          image: elghibaomar/chatbot-frontend:latest
+          env:
+            - name: PORT
+              value: "8081"
+          ports:
+          - containerPort: 8081
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatbot-frontend-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8081
+  selector:
+    app: chatbot-frontend-deployment
+
+
+
+
+
+
