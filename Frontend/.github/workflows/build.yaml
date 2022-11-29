@@ -59,31 +59,3 @@ jobs:
 
 
 
-
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
-      # - name: docker login
-      # - name: Login to DO Container Registry with short-lived creds
-      #   run: doctl registry login --expiry-seconds 1200
-      # - name: Build container image
-      #   run: |
-      #     docker build -f Dockerfile \
-      #       -t registry.digitalocean.com/om-k8s/vuejs-k8s-web:latest \
-      #       -t registry.digitalocean.com/om-k8s/vuejs-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
-      #       .
-      # - name: Push image
-      #   run: |
-      #     docker push registry.digitalocean.com/om-k8s/vuejs-k8s-web --all-tags
-      # - name: K8s cluster kubeconfig file with/ short-lived creds
-      #   run: |
-      #     doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
-
-      # - name: Deployment image
-      #   run: |
-      #     kubectl apply -f k8s/apps/vuejs-k8s-web.yaml  
-      # - name: Update Deployment image
-      #   run: |
-      #     kubectl set image deployment/vuejs-k8s-web-deployment vuejs-k8s-web=registry.digitalocean.com/om-k8s/vuejs-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
-      # - name: Wait for rollout to finish
-      #   run: |
-      #     kubectl rollout status deployment/vuejs-k8s-web-deployment
